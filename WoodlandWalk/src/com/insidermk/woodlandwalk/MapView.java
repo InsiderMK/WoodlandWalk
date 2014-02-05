@@ -5,6 +5,7 @@ import java.util.HashMap;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.util.Pair;
 import android.view.MotionEvent;
@@ -35,6 +36,14 @@ public class MapView extends View implements OnTouchListener, LocationListener {
         init();
     }
     
+    public MapView(Context context, AttributeSet attr) {
+        super(context, attr);
+        
+        setOnTouchListener(this);
+
+        init();
+    }
+
     private void init() {
     }
     
